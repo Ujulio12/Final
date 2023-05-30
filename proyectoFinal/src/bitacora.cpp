@@ -15,13 +15,14 @@ void bitacora::ingreso(string nombreAd, string code)
     file.open("ParticipantRecord.txt", ios::app | ios::out);
     auto now = std::chrono::system_clock::now();
     std::time_t fecha = std::chrono::system_clock::to_time_t(now);
-    file << std::setw(15) << nombreAd << std::setw(15) << code << std::setw(30) << std::ctime(&fecha);  "\n";
+    file << std::setw(15) << nombreAd << std::setw(15) << code << std::setw(30) << std::ctime(&fecha)<< std::setw(30);  "\n";
     file.close();
 }
 void bitacora::desplegarBitacora(string nombreAd, string code)
 {
     system("cls");
 	fstream file;
+    string read;
     cout << "\t\t\tNombre Administrador: " << nombreAd << endl;
     cout << "" << endl;
 	cout << "          __^__                                     __^__"<< endl;
@@ -38,22 +39,14 @@ void bitacora::desplegarBitacora(string nombreAd, string code)
 	}
 	else
 	{
-		file >> nombreAd >> code ;
+		file >> nombreAd >> code  ;
+		cout << std::setw(15) << "Nombre Adm" << std::setw(15) << "Codigo" << std::setw(20) << "fecha y hora"<< std::setw(30);  "\n";
 		while(!file.eof())
 		{
-
-			cout << "                 *============================* "<< endl;
-            cout << "                                              "<< endl;
-            cout << "                   Nombre administrador: "<< nombreAd << endl;
-            cout << "                   Codigo de accion : "<< code << endl;
-            cout << "                                              "<< endl;
-            cout << "                 *============================* "<< endl;
-			file >> nombreAd >> code;
-		}
-			cout<<"\n\t\t\tNo hay informacion...";
-		}
+            getline(file,read);
+            cout << read << endl;
+        }
+    }
 		file.close();
         void ingreso(string nameAd,string code);
-	}
-
-
+}

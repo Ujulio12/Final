@@ -21,9 +21,9 @@ class usuario
 {
 	private:
 		string IDAdministrador,nameAdministrador,passwordAdministrador;
-		string ID,name,password;
-		int salario,cantidadHoras, valorHoras, totalHoras,adelantos;
-		double IGSS, IRTRA, salarioNeto;
+		string ID,name,password, departamento;
+		int telefono, salario,cantidadHoras, valorHoras, totalHoras;
+		double IGSS, IRTRA, salarioNeto, adelantos;
 	public:
 		void menuAdministrador();
 		void insertarAdministrador();
@@ -36,6 +36,9 @@ class usuario
 		void buscarTrabajador();
 		void borrarTrabajador();
 		void desplegarAplicaciones();
+		void desplegarAdministracion();
+        void desplegarVentas();
+		void menuDepartamentos();
 };
 
 #endif // USUARIO_H
