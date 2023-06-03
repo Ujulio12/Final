@@ -451,3 +451,66 @@
 	<vector>
 	<chrono>
 
+1685720798 source:c:\users\kesdy\documents\programacion1\final\proyectofinal\main.cpp
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685743219 c:\users\kesdy\documents\programacion1\final\proyectofinal\include\usuario.h
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 c:\users\kesdy\documents\programacion1\final\proyectofinal\include\bitacora.h
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 source:c:\users\kesdy\documents\programacion1\final\proyectofinal\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685768342 source:c:\users\kesdy\documents\programacion1\final\proyectofinal\src\usuario.cpp
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
