@@ -288,7 +288,7 @@
 	<vector>
 	<chrono>
 
-1685742145 c:\users\kesdy\desktop\proyectofinal\include\usuario.h
+1685414790 c:\users\kesdy\desktop\proyectofinal\include\usuario.h
 	"usuario.h"
 	"bitacora.h"
 	<iostream>
@@ -325,8 +325,121 @@
 	<vector>
 	<chrono>
 
-1685744506 source:c:\users\kesdy\desktop\proyectofinal\src\usuario.cpp
+1685542556 source:c:\users\kesdy\desktop\proyectofinal\src\usuario.cpp
 	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685346084 source:c:\users\lima\desktop\nuevo\proyectofinal\main.cpp
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685414790 c:\users\lima\desktop\nuevo\proyectofinal\include\usuario.h
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685348260 c:\users\lima\desktop\nuevo\proyectofinal\include\bitacora.h
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685594617 source:c:\users\lima\desktop\nuevo\proyectofinal\src\bitacora.cpp
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685595311 source:c:\users\lima\desktop\nuevo\proyectofinal\src\usuario.cpp
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\main.cpp
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685743219 c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\include\usuario.h
+	"usuario.h"
+	"bitacora.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\include\bitacora.h
+	"usuario.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+	<vector>
+	<chrono>
+
+1685720798 source:c:\users\kesdy\downloads\tareasprograuno2k23-main\nomina umg\proyectofinal\src\bitacora.cpp
 	"bitacora.h"
 	<iostream>
 	<fstream>

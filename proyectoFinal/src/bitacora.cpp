@@ -25,22 +25,26 @@ void bitacora::desplegarBitacora(string nombreAd, string code)
     string read;
     cout << "\t\t\tNombre Administrador: " << nombreAd << endl;
     cout << "" << endl;
-	cout << "          __^__                                     __^__"<< endl;
-    cout << "         ( ___ )-----------------------------------( ___ )"<< endl;
-    cout << "          | / |                                     | / |"<< endl;
-    cout << "          | / |   Tabla de Detalles de Trabajador   | / |"<< endl;
-    cout << "          |___|                                     |___|"<< endl;
-    cout << "         (_____)-----------------------------------(_____)"<< endl;
+	cout << "        __^__                                     __^__"<< endl;
+    cout << "       ( ___ )-----------------------------------( ___ )"<< endl;
+    cout << "        | / |                                     | / |"<< endl;
+    cout << "        | / |   Tabla de Detalles de Trabajador   | / |"<< endl;
+    cout << "        |___|                                     |___|"<< endl;
+    cout << "       (_____)-----------------------------------(_____)"<< endl;
+    cout << "=================================================================" <<endl;
+    cout << "||    Nombre Admin       Codigo         Fecha y Hora           ||" <<endl;
+    cout << "=================================================================" <<endl;
 	file.open("ParticipantRecord.txt",ios::in);
 	if(!file)
 	{
-		cout << "\n\t\t\tNo hay informacion...";
+		cout << "==============================================" <<endl;
+        cout << "||    No hay ninguna informacion aca...     ||" <<endl;
+        cout << "==============================================" <<endl;
 		file.close();
 	}
 	else
 	{
-		file >> nombreAd >> code  ;
-		cout << std::setw(15) << "Nombre Adm" << std::setw(15) << "Codigo" << std::setw(20) << "fecha y hora"<< std::setw(30);  "\n";
+		file >> nombreAd >> code;
 		while(!file.eof())
 		{
             getline(file,read);
