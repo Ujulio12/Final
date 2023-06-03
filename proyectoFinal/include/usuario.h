@@ -37,6 +37,8 @@ class usuario
 		void borrarTrabajador();
 		void desplegarAplicaciones();
 		void desplegarAdministracion();
+		void desplegarContabilidad();
+        void desplegarRecepcion();
         void desplegarVentas();
 		void menuDepartamentos();
 };
