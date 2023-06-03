@@ -8,12 +8,10 @@ gamemap::gamemap()
 {
     //ctor
     playerCell = NULL;
-    loadMapFromFile();
+    drawPortada();
     isGameOver = false;
-
 }
-void gamemap::draw()
-{
+void gamemap::draw(){
     //system("cls");
     for (int i = 0; i < 15; i++)
     {
@@ -31,9 +29,32 @@ bool gamemap::setPlayerCell(int playerX, int playerY)
     {
         if (cell[playerX][playerY].id == '$')
         {
-            drawVictoria();
-            isGameOver = true;
-            return true;
+            if(contador==0)
+            {
+                drawPremio4();
+            }
+            contador++;
+            if(contador==1)
+            {
+                loadMapFromFile2();
+
+            }
+            if(contador==2)
+            {
+                drawPremio2();
+                loadMapFromFile3();
+            }
+            if(contador==3)
+            {
+                drawPremio3();
+                loadMapFromFile4();
+            }
+            if(contador==4)
+            {
+                drawVictoria();
+                isGameOver = true;
+                return true;
+            }
         } else
         { // evalúa espacio
             //Se verifica que maque con cero la posicion que abandona el jugador
@@ -47,7 +68,8 @@ bool gamemap::setPlayerCell(int playerX, int playerY)
             //Cambio de coordenadas para corregiro problema de los movimientos del jugador en el eje X
             //playerCell = &cell[playerY][playerX];
             playerCell = &cell[playerX][playerY];
-             playerCell->id=169;
+            playerCell->id=169;
+
           //ascii 169
         }
 
@@ -64,7 +86,6 @@ void gamemap::loadMapFromFile()
     string line;
     int row = 0;
     char userInput = ' ';
-    system("cls");
     ifstream myFile("map.txt");
     if(myFile.is_open())
     {
@@ -102,14 +123,12 @@ void gamemap::loadMapFromFile()
             cout << "NO podemos continuar el juego" << endl;
         }
     }
-
 }
 void gamemap::loadMapFromFile2()
 {
     string line;
     int row = 0;
     char userInput = ' ';
-    system("cls");
     ifstream myFile("map2.txt");
     if(myFile.is_open())
     {
@@ -141,7 +160,7 @@ void gamemap::loadMapFromFile2()
         cin >> userInput;
         if (userInput='s')
         {
-            createMapToFile2();
+            createMapToFile();
         } else
         {
             cout << "NO podemos continuar el juego" << endl;
@@ -150,10 +169,9 @@ void gamemap::loadMapFromFile2()
 }
 void gamemap::loadMapFromFile3()
 {
-    string line;
+string line;
     int row = 0;
     char userInput = ' ';
-    system("cls");
     ifstream myFile("map3.txt");
     if(myFile.is_open())
     {
@@ -185,7 +203,7 @@ void gamemap::loadMapFromFile3()
         cin >> userInput;
         if (userInput='s')
         {
-            createMapToFile3();
+            createMapToFile();
         } else
         {
             cout << "NO podemos continuar el juego" << endl;
@@ -194,11 +212,10 @@ void gamemap::loadMapFromFile3()
 }
 void gamemap::loadMapFromFile4()
 {
-    string line;
+string line;
     int row = 0;
     char userInput = ' ';
     ifstream myFile("map4.txt");
-    system("cls");
     if(myFile.is_open())
     {
         //Se obtiene el mapa externo y se general el mapa de celdas
@@ -229,7 +246,7 @@ void gamemap::loadMapFromFile4()
         cin >> userInput;
         if (userInput='s')
         {
-            createMapToFile4();
+            createMapToFile();
         } else
         {
             cout << "NO podemos continuar el juego" << endl;
@@ -239,103 +256,6 @@ void gamemap::loadMapFromFile4()
 void gamemap::createMapToFile()
 {
     ofstream myFile("map.txt");
-    if (myFile.is_open())
-    {
-        for (int i = 0; i < 15; i++)
-        {
-            for (int j = 0; j < 10; j++)
-            {
-                if (i == 0 || i == 14)
-                {
-                    myFile << "1";
-                } else
-                {
-                    if (j == 0 || j == 9)
-                    {
-                        myFile << "1";
-                    } else
-                    {
-                        myFile << "0";
-                    }
-                }
-
-            }
-            myFile << endl;
-        }
-        myFile.close();
-    } else
-    {
-        cout << "Error FATAL: archivo no pudo ser creado" << endl;
-    }
-}
-void gamemap::createMapToFile2()
-{
-    ofstream myFile("map2.txt");
-    if (myFile.is_open())
-    {
-        for (int i = 0; i < 15; i++)
-        {
-            for (int j = 0; j < 10; j++)
-            {
-                if (i == 0 || i == 14)
-                {
-                    myFile << "1";
-                } else
-                {
-                    if (j == 0 || j == 9)
-                    {
-                        myFile << "1";
-                    } else
-                    {
-                        myFile << "0";
-                    }
-                }
-
-
-            }
-            myFile << endl;
-        }
-        myFile.close();
-    } else
-    {
-        cout << "Error FATAL: archivo no pudo ser creado" << endl;
-    }
-}
-void gamemap::createMapToFile3()
-{
-    ofstream myFile("map3.txt");
-    if (myFile.is_open())
-    {
-        for (int i = 0; i < 15; i++)
-        {
-            for (int j = 0; j < 10; j++)
-            {
-                if (i == 0 || i == 14)
-                {
-                    myFile << "1";
-                } else
-                {
-                    if (j == 0 || j == 9)
-                    {
-                        myFile << "1";
-                    } else
-                    {
-                        myFile << "0";
-                    }
-                }
-
-            }
-            myFile << endl;
-        }
-        myFile.close();
-    } else
-    {
-        cout << "Error FATAL: archivo no pudo ser creado" << endl;
-    }
-}
-void gamemap::createMapToFile4()
-{
-    ofstream myFile("map3.txt");
     if (myFile.is_open())
     {
         for (int i = 0; i < 15; i++)
@@ -384,85 +304,9 @@ void gamemap::drawPortada()
     {
         cout << "Error FATAL: el archivo de portada no pudo ser cargado" << endl;
     }
+	loadMapFromFile();
 }
 void gamemap::drawVictoria()
-{
-    string line;
-    char userInput = ' ';
-    system("cls");
-    ifstream myFile("premio4.txt");
-    if(myFile.is_open())
-    {
-        //Se obtiene el mapa externo y se general el mapa de celdas
-        while( getline(myFile, line))
-        {
-            cout << line << endl;
-        }
-        myFile.close();
-
-        cout << "Listo para continuar tu aventura?" << endl;
-        cin >> userInput;
-        playerCell = NULL;
-
-        loadMapFromFile2();
-        isGameOver = false;
-    }
-    else
-    {
-        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
-    }
-}
-void gamemap::drawVictoria2()
-{
-    string line;
-    char userInput = ' ';
-    ifstream myFile("premio3.txt");
-    if(myFile.is_open())
-    {
-        //Se obtiene el mapa externo y se general el mapa de celdas
-        while( getline(myFile, line))
-        {
-            cout << line << endl;
-        }
-        myFile.close();
-        cout << "Listo para continuar tu aventura?" << endl;
-        cin >> userInput;
-        playerCell = NULL;
-
-        loadMapFromFile3();
-        isGameOver = false;
-    }
-    else
-    {
-        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
-    }
-}
-void gamemap::drawVictoria3()
-{
-    string line;
-    char userInput = ' ';
-    ifstream myFile("premio4.txt");
-    if(myFile.is_open())
-    {
-        //Se obtiene el mapa externo y se general el mapa de celdas
-        while( getline(myFile, line))
-        {
-            cout << line << endl;
-        }
-        myFile.close();
-        cout << "Listo para continuar tu aventura?" << endl;
-        cin >> userInput;
-        playerCell = NULL;
-
-        loadMapFromFile4();
-        isGameOver = false;
-    }
-    else
-    {
-        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
-    }
-}
-void gamemap::drawVictoria4()
 {
     string line;
     char userInput = ' ';
@@ -475,19 +319,79 @@ void gamemap::drawVictoria4()
             cout << line << endl;
         }
         myFile.close();
-        cout << "Completaste el juego!!! Felicidades :)" << endl;
         cin >> userInput;
-
-        isGameOver = true;
-
     }
     else
     {
         cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
     }
+    return;
 }
-
+void gamemap::drawPremio2()
+{
+    string line;
+    char userInput = ' ';
+    ifstream myFile("premio2.txt");
+    if(myFile.is_open())
+    {
+        //Se obtiene el mapa externo y se general el mapa de celdas
+        while( getline(myFile, line))
+        {
+            cout << line << endl;
+        }
+        myFile.close();
+        cin >> userInput;
+    }
+    else
+    {
+        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
+    }
+    return;
+}
+void gamemap::drawPremio3()
+{
+    string line;
+    char userInput = ' ';
+    ifstream myFile("premio3.txt");
+    if(myFile.is_open())
+    {
+        //Se obtiene el mapa externo y se general el mapa de celdas
+        while( getline(myFile, line))
+        {
+            cout << line << endl;
+        }
+        myFile.close();
+        cin >> userInput;
+    }
+    else
+    {
+        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
+    }
+    return;
+}
+void gamemap::drawPremio4()
+{
+    string line;
+    char userInput = ' ';
+    ifstream myFile("premio4.txt");
+    if(myFile.is_open())
+    {
+        //Se obtiene el mapa externo y se general el mapa de celdas
+        while( getline(myFile, line))
+        {
+            cout << line << endl;
+        }
+        myFile.close();
+        cin >> userInput;
+    }
+    else
+    {
+        cout << "Error FATAL: el archivo de ganador no pudo ser cargado" << endl;
+    }
+    return;
+}
 gamemap::~gamemap()
 {
     //dtor
 }
+

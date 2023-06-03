@@ -1,6 +1,8 @@
 #ifndef GAMEMAP_H
 #define GAMEMAP_H
 #include "mapcell.h"
+#include <iostream>
+using namespace std;
 // Encabezado que define toda la funcionabilidad del mapa del juego
 
 class gamemap
@@ -14,24 +16,22 @@ class gamemap
         bool setPlayerCell(int playerX, int playerY);
         void drawPortada();
         void drawVictoria();
-        void drawVictoria2();
-        void drawVictoria3();
-        void drawVictoria4();
+        void drawPremio2();
+        void drawPremio3();
+        void drawPremio4();
         virtual ~gamemap();
         bool isGameOver = false;
-
 
     protected:
 
     private:
         void loadMapFromFile();
+        void createMapToFile();
+        string nombre;
+        int contador = 0;
         void loadMapFromFile2();
         void loadMapFromFile3();
         void loadMapFromFile4();
-        void createMapToFile();
-        void createMapToFile2();
-        void createMapToFile3();
-        void createMapToFile4();
 };
 
 #endif // GAMEMAP_H
