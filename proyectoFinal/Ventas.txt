@@ -1,2 +1,3 @@
-12             Carlos         CAR            Ventas         92048521       4000           0              1426.8          40             3533.2         10              
-1              Ramon          RAM            Ventas         14873985       3500           0              1373.45         35             3091.55        10              
+10             KESDY          KES            502            Ventas         1000           0              1106.7          10             883.3          10              
+10             Kesdy          KS             502            Ventas         1000           0              1106.7          10             883.3          10              
+10             Kesdy          KES            5              Ventas         1000           0              1106.7          10             883.3          10              
